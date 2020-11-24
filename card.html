@@ -1,0 +1,99 @@
+<html>
+<style>
+.card{
+	align-items: center;
+	align-content: center;
+	width: 200;
+	height: 300;
+	text-align: center;
+	border: 2px solid #FF9900;
+	color: red;
+	outline: 3px dotted red;
+	outline-offset: 4px;
+	border-radius: 25px;
+	display:inline-block;
+
+
+}
+
+.pic{
+	align-items: center;
+	align-content: center;
+	width: 180;
+	height: 180;
+	text-align: center;
+	border: 2px solid #FF9900;
+	color: red;
+	outline: 3px dotted red;
+	outline-offset: 4px;
+	border-radius: 25px;
+}
+.chosen{
+	color: green;
+}
+
+.for_list{
+color: blue;
+font-size: 20px;
+text-align: left;
+width: 200;
+height: 300;
+margin: 1px;
+margin-left: 30px;
+}
+
+</style>
+
+<body>
+	{%for name in names%}
+	<div id="cards" display=block>
+		<div class="card">
+			<H1>{{title}}</H1>
+			 <img border-radius=25px src="{{name[0][1]}}" height="100" width="100">
+			
+		<ol class="for_list">
+			<li id="1st" class="chosen">{{name[0][0]}}</li>
+			<li id="2nd">{{name[1][0]}}</li>
+			<li id="3rd">{{name[2][0]}}</li>
+			<li id="4th">{{name[3][0]}}</li>
+		</ul>
+		</div>
+
+		<div class="card" >
+			<H1>{{title}}</H1>
+			 <img border-radius=25px src="{{name[1][1]}}" height="100" width="100">
+			
+		<ol class="for_list">
+			<li id="1st">{{name[0][0]}}</li>
+			<li id="2nd" class="chosen">{{name[1][0]}}</li>
+			<li id="3rd">{{name[2][0]}}</li>
+			<li id="4th">{{name[3][0]}}</li>
+		</ol>
+		</div>
+
+	<div class="card" >
+			<H1>{{title}}</H1>
+			 <img border-radius=25px src="{{name[2][1]}}" height="100" width="100">
+			
+		<ol class="for_list">
+			<li id="1st">{{name[0][0]}}</li>
+			<li id="2nd">{{name[1][0]}}</li>
+			<li id="3rd" class="chosen">{{name[2][0]}}</li>
+			<li id="4th">{{name[3][0]}}</li>
+		</ol>
+		</div>
+
+	<div class="card" >
+			<H1>{{title}}</H1>
+			 <img border-radius=25px src="{{name[3][1]}}" height="100" width="100">
+			
+		<ol class="for_list">
+			<li id="1st">{{name[0][0]}}</li>
+			<li id="2nd">{{name[1][0]}}</li>
+			<li id="3rd">{{name[2][0]}}</li>
+			<li id="4th" class="chosen">{{name[3][0]}}</li>
+		</ol>
+	</div>
+	</div>
+	{%endfor%}
+</body>
